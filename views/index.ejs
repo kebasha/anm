@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/weui.min.css"/>
+    <link rel="stylesheet" href="/stylesheets/example.css"/>
+    <link rel="stylesheet" href="/stylesheets/css.css"/>
+  </head>
+  <body ontouchstart ng-app="loveApp">
+        <div class="weui_tab">
+            <div ui-view="" class="weui_tab_bd">
+				
+            </div>
+            <div class="weui_tabbar">
+                <a href="javascript:;" ng-class="{weui_bar_item_on: path == '/home'}" ui-sref="home" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <img src="/images/icon_nav_button.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">首页</p>
+                </a>
+                <a href="javascript:;" ng-class="{weui_bar_item_on: path == '/project'}" ui-sref="project" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <img src="/images/icon_nav_msg.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">项目</p>
+                </a>
+                <a href="javascript:;" ng-class="{weui_bar_item_on: path == '/moving'}" ui-sref="moving" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <img src="/images/icon_nav_article.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">动态</p>
+                </a>
+                <a href="javascript:;" ng-class="{weui_bar_item_on: path == '/me'}" ui-sref="me" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <img src="/images/icon_nav_cell.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">我</p>
+                </a>
+            </div>
+        </div>
+
+        <script src="/javascripts/angular.js"></script>
+    	<script src="/javascripts/angular-ui-router.js"></script>
+        <script src="/javascripts/app-angular.js"></script>
+        <script src="/javascripts/controllers/HomeController.js"></script>
+  </body>
+</html>
